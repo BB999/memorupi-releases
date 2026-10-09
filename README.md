@@ -5,15 +5,15 @@ Mac・Windows向けの、メモとデスクトップ付箋のアプリです。
 
 ## 現在の配布
 
-初期テスト版です。Mac Apple Silicon版とWindows x64版を配布しています。Intel Mac版・Windows ARM64ネイティブ版の配布はまだありません。
+現在の安定版・自動更新対象は [0.3.4](https://github.com/BB999/memorupi-releases/releases/tag/v0.3.4) です。Mac Apple Silicon版とWindows x64版を配布しています。Intel Mac版・Windows ARM64ネイティブ版の配布はまだありません。
 
 [最新版をダウンロード](https://github.com/BB999/memorupi-releases/releases/latest)
 
 Windowsは `Memorupi_<バージョン>_windows_x86_64.exe` をダウンロードして実行します。ユーザー単位のインストーラーで、WebView2が未導入の場合はインターネット接続が必要です。初回インストール後、今後の更新はアプリ内から適用できます。
 
-Windows版はMac上でクロスビルドし、配布ファイルと更新用署名を検証しています。Windows実機での起動・保存・更新はまだ未検証です。AuthenticodeによるOS署名は未実施のため、SmartScreen等の警告が出る場合があります。
+Windows版はMac上でクロスビルドし、配布ファイルと更新用署名を検証しています。ユーザーからWindows 0.3.4が正常に動作しているとの報告を受けています。Windows画面の独立検査・今回の実際の更新と再起動は未確認です。AuthenticodeによるOS署名は未実施のため、SmartScreen等の警告が出る場合があります。
 
-Mac版はDeveloper ID署名・Apple公証をまだ行っていません。他のMacでの初回起動時にGatekeeperの警告が出る場合があります。一般向け正式配布版ではありません。
+Mac版はDeveloper ID署名・Apple公証をまだ行っていません。他のMacでの初回起動時にGatekeeperの警告が出る場合があります。OS署名・公証を行っていない個人用配布です。
 更新ファイルにはTauri Updater用の署名を付けていますが、これはAppleの署名・公証やWindowsのAuthenticode署名とは別です。
 
 ## 更新
@@ -23,5 +23,7 @@ Mac版はDeveloper ID署名・Apple公証をまだ行っていません。他の
 「保存して更新・再起動」を選ぶと、すべてのウィンドウのメモを保存してから更新します。
 保存失敗・入力の競合・変換中・応答待ち超過の場合は、入力を残して更新を中止します。
 
-メモは端末内に保存します。Google Drive同期・iPhone版は未実装です。
+更新前に設定からJSONバックアップを保存してください。0.3.4を既に手動インストールした場合は同じ版なので、更新通知は出ません。
+
+メモは端末内に保存します。0.3.4では、枠なし・角丸の独立付箋、マウスを乗せたときだけ表示する操作欄、本文に合わせた高さ調整、同じGoogleアカウントでのDrive同期を利用できます。操作欄は本文と重ならない別行表示です。Drive同期には別途Desktop OAuth設定JSONと本人の認可・既存メモの紐づけ確認が必要です。iPhone版は未実装です。
 公開する配布ファイルに利用者のメモや認証情報は含みません。
