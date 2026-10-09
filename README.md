@@ -5,12 +5,16 @@ Mac・Windows向けの、メモとデスクトップ付箋のアプリです。
 
 ## 現在の配布
 
-初期テスト版・Mac Apple Silicon向けです。Windows版とIntel Mac版の配布はまだありません。
+初期テスト版です。Mac Apple Silicon版とWindows x64版を配布しています。Intel Mac版・Windows ARM64ネイティブ版の配布はまだありません。
 
 [最新版をダウンロード](https://github.com/BB999/memorupi-releases/releases/latest)
 
+Windowsは `Memorupi_<バージョン>_windows_x86_64.exe` をダウンロードして実行します。ユーザー単位のインストーラーで、WebView2が未導入の場合はインターネット接続が必要です。初回インストール後、今後の更新はアプリ内から適用できます。
+
+Windows版はMac上でクロスビルドし、配布ファイルと更新用署名を検証しています。Windows実機での起動・保存・更新はまだ未検証です。AuthenticodeによるOS署名は未実施のため、SmartScreen等の警告が出る場合があります。
+
 Mac版はDeveloper ID署名・Apple公証をまだ行っていません。他のMacでの初回起動時にGatekeeperの警告が出る場合があります。一般向け正式配布版ではありません。
-更新ファイルにはTauri Updater用の署名を付けていますが、これはAppleの署名・公証とは別です。
+更新ファイルにはTauri Updater用の署名を付けていますが、これはAppleの署名・公証やWindowsのAuthenticode署名とは別です。
 
 ## 更新
 
